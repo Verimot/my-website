@@ -79,6 +79,71 @@
     .contact-form button:hover{background:#9e4e2e}
     .contact-fine{font-size:0.67rem;color:var(--bark);margin-top:0.4rem;font-weight:300}
     .contact-fine a{color:var(--bark);border-bottom:1px solid var(--stone)}
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+
+      /* Stack the two columns into one */
+      .page {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      /* Remove the side border since we're now stacked */
+      .left {
+        border-right: none;
+        border-bottom: 1px solid var(--stone);
+        padding: 2.5rem 1.75rem;
+      }
+
+      /* Tighten up the inner padding */
+      .left-main {
+        padding: 2rem 0;
+      }
+
+      /* Shrink the heading on small screens */
+      .left-main h1 {
+        font-size: 2.5rem;
+      }
+
+      /* Hide the pillars on mobile to keep it clean and focused */
+      .pillars {
+        display: none;
+      }
+
+      .left-footer {
+        margin-top: 1.5rem;
+      }
+
+      /* Right side padding adjustments */
+      .right-top {
+        padding: 2.5rem 1.75rem;
+        /* No longer needs to fill vertical space */
+        flex: none;
+      }
+
+      .right-bottom {
+        padding: 2rem 1.75rem;
+      }
+
+      /* Stack the name/email row in the contact form */
+      .contact-row {
+        flex-direction: column;
+      }
+    }
+
+    /* ── Small phones (iPhone SE etc.) ── */
+    @media (max-width: 380px) {
+      .left {
+        padding: 2rem 1.25rem;
+      }
+      .right-top, .right-bottom {
+        padding: 2rem 1.25rem;
+      }
+      .left-main h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -128,7 +193,8 @@
       <h2>Get notified when we launch.</h2>
       <p>Sign up and you'll be the first to receive our free ergonomics starter guide — plus weekly tips once we're live. No spam, unsubscribe anytime.</p>
 
-      <form action="https://app.kit.com/forms/9427125/subscriptions" method="POST" class="form-col">
+      <!-- Replace YOUR_KIT_FORM_ACTION with your Kit embed form URL -->
+      <form action="YOUR_KIT_FORM_ACTION" method="POST" class="form-col">
         <input type="text" name="first_name" placeholder="First name (optional)">
         <input type="email" name="email_address" placeholder="Your email address" required>
         <button type="submit">Notify me at launch →</button>
