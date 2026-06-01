@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Here — Deskfix</title>
+  <meta property="og:title" content="Start Here — Free Ergonomics Starter Guide">
+  <meta property="og:description" content="New to Deskfix? Start here. Fix your home office setup in 10 minutes, no gear required.">
+  <meta property="og:url" content="https://deskfix.blog/start-here.html">
+  
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="shortcut icon" href="assets/icons/favicon.ico">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
+
+<link rel="manifest" href="assets/icons/site.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .start-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      border-bottom: 1px solid var(--stone);
+      min-height: 420px;
+    }
+    .start-hero-left {
+      padding: 4rem 3rem 4rem 2.5rem;
+      border-right: 1px solid var(--stone);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .start-hero-left .eyebrow { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); margin-bottom: 1.25rem; font-weight: 500; display: block; }
+    .start-hero-left h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--ink); line-height: 1.1; margin-bottom: 1rem; }
+    .start-hero-left h1 em { font-style: italic; color: var(--moss); }
+    .start-hero-left p { color: var(--bark); font-size: 1rem; font-weight: 300; line-height: 1.7; max-width: 420px; margin-bottom: 2rem; }
+    .start-hero-right { background: var(--moss); padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .start-hero-right h3 { font-family: var(--serif); font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem; }
+    .start-hero-right p { color: rgba(255,255,255,0.75); font-size: 0.9rem; font-weight: 300; line-height: 1.6; margin-bottom: 1.5rem; }
+    .nl-form { display: flex; flex-direction: column; gap: 0.6rem; }
+    .nl-form input { padding: 0.72rem 1rem; border: none; font-family: var(--sans); font-size: 0.88rem; color: var(--ink); outline: none; }
+    .nl-form input::placeholder { color: #b0a090; }
+    .nl-form button { background: var(--rust); color: #fff; border: none; padding: 0.8rem; font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+    .nl-form button:hover { background: #9e4e2e; }
+    .nl-fine { font-size: 0.67rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem; }
+
+    .checklist-section { padding: 3.5rem 2.5rem; border-bottom: 1px solid var(--stone); }
+    .checklist-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--stone); }
+    .check-item { padding: 2rem 1.75rem; border-right: 1px solid var(--stone); }
+    .check-item:last-child { border-right: none; }
+    .check-num { font-family: var(--serif); font-size: 2rem; color: var(--stone); margin-bottom: 0.75rem; line-height: 1; }
+    .check-item h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); margin-bottom: 0.5rem; }
+    .check-item p { font-size: 0.87rem; color: var(--bark); font-weight: 300; line-height: 1.6; }
+
+    .start-posts { padding: 3.5rem 2.5rem; border-bottom: 1px solid var(--stone); }
+    .start-post-list { display: flex; flex-direction: column; gap: 1px; background: var(--stone); border: 1px solid var(--stone); }
+    .start-post-item { background: var(--cream); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; transition: background 0.15s; text-decoration: none; color: var(--ink); }
+    .start-post-item:hover { background: var(--mist); }
+    .post-item-info { flex: 1; }
+    .post-item-cat { font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.3rem; font-weight: 500; }
+    .post-item-title { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); line-height: 1.25; margin-bottom: 0.3rem; }
+    .post-item-desc { font-size: 0.84rem; color: var(--bark); font-weight: 300; }
+    .post-item-meta { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bark); white-space: nowrap; flex-shrink: 0; }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19JX55D3QB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-19JX55D3QB');
+</script>
+</head>
+<body>
+
+  <div class="disclosure-bar">
+    <p>Some links on this site are affiliate links — we may earn a commission at no extra cost to you.</p>
+    <a href="disclosure.html">Read our full disclosure</a>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Deskfix</a>
+    <div class="nav-links">
+      <a href="blog/">Blog</a>
+      <a href="index.html#picks">Top Picks</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="start-here.html" class="nav-cta">Free Guide →</a>
+    </div>
+  </nav>
+
+  <section class="start-hero">
+    <div class="start-hero-left">
+      <span class="eyebrow">New here? Start with this.</span>
+      <h1>Fix your desk.<br><em>Feel better.</em><br>Takes 10 minutes.</h1>
+      <p>Before you buy anything, read this. Most common desk pain is caused by a few simple setup mistakes — and most of them are free to fix. This guide walks you through all of them.</p>
+      <a href="blog/free-posture-fixes.html" class="btn-primary">Read the free guide →</a>
+    </div>
+    <div class="start-hero-right" id="newsletter">
+      <h3>Get the weekly fix.</h3>
+      <p>One email a week. Practical ergonomics tips, new research, and honest product picks for remote workers.</p>
+
+      <form action="https://app.kit.com/forms/9427125/subscriptions" method="POST" class="nl-form">
+        <input type="text" name="first_name" placeholder="First name (optional)">
+        <input type="email" name="email_address" placeholder="Your email address" required>
+        <button type="submit">Subscribe — it's free →</button>
+      </form>
+      <p class="nl-fine">No spam. Unsubscribe anytime. See our <a href="privacy-policy.html" style="color:rgba(255,255,255,0.6);border-bottom:1px solid rgba(255,255,255,0.4)">privacy policy</a>.</p>
+    </div>
+  </section>
+
+  <section class="checklist-section">
+    <div class="sec-label">The basics</div>
+    <div class="checklist-grid">
+      <div class="check-item">
+        <div class="check-num">01</div>
+        <h3>Get your monitor at eye level</h3>
+        <p>The top of your screen should be at or just below eye level. Most people's monitors are 3–5 inches too low. A monitor arm or a laptop stand fixes this quickly.</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">02</div>
+        <h3>Set your chair height correctly</h3>
+        <p>Feet flat on the floor, knees at 90°, hips level with or slightly above your knees. Most people sit too low or too high. Takes 30 seconds to fix.</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">03</div>
+        <h3>Keep elbows at 90°</h3>
+        <p>Your keyboard should be at a height where your elbows are roughly at a right angle and your wrists are straight. Bent wrists over long sessions cause most wrist pain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="start-posts">
+    <div class="sec-label">Read these first</div>
+    <div class="start-post-list">
+
+      <a href="blog/monitor-height-guide.html" class="start-post-item">
+        <div class="post-item-info">
+          <div class="post-item-cat">Desk Setup</div>
+          <div class="post-item-title">The complete guide to monitor height — and why yours is probably wrong</div>
+          <p class="post-item-desc">The single most common ergonomics mistake, explained and fixed.</p>
+        </div>
+        <span class="post-item-meta">3 min read →</span>
+      </a>
+
+      <a href="blog/free-posture-fixes.html" class="start-post-item">
+        <div class="post-item-info">
+          <div class="post-item-cat">Quick Fix</div>
+          <div class="post-item-title">5 free adjustments that will fix your posture today</div>
+          <p class="post-item-desc">No gear, no spending. Just your current setup and five minutes.</p>
+        </div>
+        <span class="post-item-meta">4 min read →</span>
+      </a>
+
+      <a href="blog/standing-desk-research.html" class="start-post-item">
+        <div class="post-item-info">
+          <div class="post-item-cat">Research</div>
+          <div class="post-item-title">What the science actually says about standing desks</div>
+          <p class="post-item-desc">They're everywhere. Here's what the evidence actually shows.</p>
+        </div>
+        <span class="post-item-meta">5 min read →</span>
+      </a>
+
+      <a href="blog/best-ergonomic-chairs-under-400.html" class="start-post-item">
+        <div class="post-item-info">
+          <div class="post-item-cat">Chair Guide</div>
+          <div class="post-item-title">Best ergonomic chairs under $400 — tested and ranked</div>
+          <p class="post-item-desc">When a chair upgrade is genuinely needed, here's where to start.</p>
+        </div>
+        <span class="post-item-meta">6 min read →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Deskfix</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="blog/">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="disclosure.html">Disclosure</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Deskfix</div>
+  </footer>
+
+</body>
+</html>

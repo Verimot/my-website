@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deskfix — Work Smarter. Hurt Less. Live Better.</title>
+  <meta property="og:title" content="Deskfix — Work Smarter. Hurt Less. Live Better.">
+  <meta property="og:description" content="Practical ergonomics education, honest product reviews, and the research behind why your body feels the way it does after a long day at your desk.">
+  <meta property="og:image" content="https://deskfix.blog/images/og-home.jpg">
+  <meta property="og:url" content="https://deskfix.blog">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; border-bottom: 1px solid var(--stone); }
+    .hero-left { padding: 4rem 3rem 4rem 2.5rem; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--stone); }
+    .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); margin-bottom: 1.25rem; font-weight: 500; }
+    .hero-left h1 { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.08; color: var(--ink); margin-bottom: 1.25rem; }
+    .hero-left h1 em { font-style: italic; color: var(--moss); }
+    .hero-left > p { color: var(--bark); font-size: 1rem; line-height: 1.7; max-width: 400px; margin-bottom: 2rem; font-weight: 300; }
+    .hero-btns { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .hero-right { background: var(--mist); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+    .hero-img-area { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .stat-strip { display: flex; }
+    .stat-cell { flex: 1; padding: 1rem; border-top: 1px solid var(--stone); border-right: 1px solid var(--stone); background: var(--cream); }
+    .stat-cell:last-child { border-right: none; }
+    .stat-cell .num { font-family: var(--serif); font-size: 1.5rem; color: var(--moss); }
+    .stat-cell .lbl { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark); margin-top: 0.1rem; }
+
+    .pillars { padding: 3.5rem 2.5rem; border-bottom: 1px solid var(--stone); }
+    .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--stone); }
+    .pillar { padding: 2rem 1.75rem; border-right: 1px solid var(--stone); }
+    .pillar:last-child { border-right: none; }
+    .pillar-num { font-family: var(--serif); font-size: 2.2rem; color: var(--stone); line-height: 1; margin-bottom: 0.75rem; }
+    .pillar h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); margin-bottom: 0.5rem; }
+    .pillar p { font-size: 0.87rem; color: var(--bark); line-height: 1.65; font-weight: 300; }
+    .pillar-link { display: inline-block; margin-top: 1rem; font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss); border-bottom: 1px solid var(--moss); padding-bottom: 1px; transition: opacity 0.2s; }
+    .pillar-link:hover { opacity: 0.7; }
+
+    .picks { padding: 3.5rem 2.5rem; border-bottom: 1px solid var(--stone); background: var(--warm); }
+    .picks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--stone); border: 1px solid var(--stone); }
+    .pick-card { background: var(--cream); padding: 1.75rem; }
+    .pick-badge { display: inline-block; background: #eef4ee; color: #2d4a2e; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; margin-bottom: 1rem; font-weight: 500; }
+    .pick-card h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.3; }
+    .pick-card > p { font-size: 0.85rem; color: var(--bark); line-height: 1.6; font-weight: 300; margin-bottom: 1rem; }
+    .affiliate-note { font-size: 0.68rem; color: var(--bark); margin-top: 0.6rem; font-style: italic; display: block; }
+
+    .posts { padding: 3.5rem 2.5rem; border-bottom: 1px solid var(--stone); }
+    .posts-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; border: 1px solid var(--stone); }
+    .post-featured { padding: 2rem; border-right: 1px solid var(--stone); }
+    .post-thumb { height: 180px; background: var(--mist); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; }
+    .post-col { display: flex; flex-direction: column; border-right: 1px solid var(--stone); }
+    .post-col:last-child { border-right: none; }
+    .post-sm { padding: 1.5rem; border-bottom: 1px solid var(--stone); flex: 1; display: flex; flex-direction: column; }
+    .post-sm:last-child { border-bottom: none; }
+    .post-cat { font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.4rem; font-weight: 500; }
+    .post-title { font-family: var(--serif); color: var(--ink); line-height: 1.25; margin-bottom: 0.5rem; }
+    .post-featured .post-title { font-size: 1.45rem; }
+    .post-sm .post-title { font-size: 0.97rem; }
+    .post-desc { font-size: 0.84rem; color: var(--bark); line-height: 1.6; font-weight: 300; flex: 1; }
+    .post-sm .read-more { margin-top: 0.9rem; }
+
+    .newsletter { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--stone); }
+    .nl-left { padding: 3.5rem 2.5rem; border-right: 1px solid var(--stone); background: var(--moss); }
+    .nl-left .sec-label { color: rgba(255,255,255,0.45); }
+    .nl-left .sec-label::after { background: rgba(255,255,255,0.2); }
+    .nl-left h2 { font-family: var(--serif); font-size: 2rem; color: #fff; line-height: 1.15; margin-bottom: 0.75rem; }
+    .nl-left > p { color: rgba(255,255,255,0.72); font-size: 0.92rem; font-weight: 300; line-height: 1.7; }
+    .nl-right { padding: 3.5rem 2.5rem; background: var(--mist); display: flex; flex-direction: column; justify-content: center; }
+    .nl-right > p { font-size: 0.85rem; color: var(--bark); margin-bottom: 1.5rem; font-weight: 300; line-height: 1.6; }
+    .form-col { display: flex; flex-direction: column; gap: 0.6rem; }
+    .form-col input { padding: 0.7rem 1rem; border: 1px solid var(--stone); background: var(--cream); font-family: var(--sans); font-size: 0.88rem; color: var(--ink); outline: none; transition: border-color 0.2s; }
+    .form-col input:focus { border-color: var(--moss); }
+    .form-col input::placeholder { color: #b0a090; }
+    .form-col button { background: var(--rust); color: #fff; border: none; padding: 0.8rem; font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+    .form-col button:hover { background: #9e4e2e; }
+    .fine { font-size: 0.68rem; color: var(--bark); margin-top: 0.6rem; font-weight: 300; }
+    .fine a { color: var(--bark); border-bottom: 1px solid var(--bark); }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19JX55D3QB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-19JX55D3QB');
+</script>
+</head>
+<body>
+
+  <div class="disclosure-bar">
+    <p>Some links on this site are affiliate links — we may earn a commission at no extra cost to you. We only recommend what we genuinely believe in.</p>
+    <a href="disclosure.html">Read our full disclosure</a>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Deskfix</a>
+    <div class="nav-links">
+      <a href="blog/">Blog</a>
+      <a href="#picks">Top Picks</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="start-here.html" class="nav-cta">Free Guide →</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Ergonomics for remote workers</p>
+      <h1>Work smarter.<br><em>Hurt less.</em><br>Live better.</h1>
+      <p>Practical ergonomics education, honest product reviews, and the research behind why your body feels the way it does after a long day at your desk.</p>
+      <div class="hero-btns">
+        <a href="start-here.html" class="btn-primary">Start Here →</a>
+        <a href="#picks" class="btn-secondary">Browse Top Picks</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-area">
+        <svg width="260" height="180" viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="110" width="200" height="8" rx="2" fill="#d4cfc4"/>
+          <rect x="10" y="118" width="240" height="5" rx="1" fill="#c8c3b8"/>
+          <rect x="100" y="68" width="60" height="42" rx="3" fill="#e0dbd0"/>
+          <rect x="104" y="72" width="52" height="32" rx="2" fill="#3d5a3e" opacity="0.13"/>
+          <rect x="112" y="80" width="36" height="2" rx="1" fill="#3d5a3e" opacity="0.25"/>
+          <rect x="112" y="85" width="28" height="2" rx="1" fill="#3d5a3e" opacity="0.18"/>
+          <rect x="112" y="90" width="32" height="2" rx="1" fill="#3d5a3e" opacity="0.18"/>
+          <rect x="118" y="118" width="24" height="16" rx="1" fill="#d4cfc4"/>
+          <rect x="50" y="90" width="38" height="28" rx="3" fill="#e8e4db"/>
+          <rect x="54" y="94" width="30" height="20" rx="1" fill="#3d5a3e" opacity="0.1"/>
+          <rect x="56" y="98" width="18" height="1.5" rx="1" fill="#3d5a3e" opacity="0.3"/>
+          <rect x="56" y="102" width="24" height="1.5" rx="1" fill="#3d5a3e" opacity="0.2"/>
+          <rect x="56" y="106" width="20" height="1.5" rx="1" fill="#3d5a3e" opacity="0.2"/>
+          <rect x="172" y="96" width="48" height="22" rx="3" fill="#e8e4db"/>
+          <circle cx="196" cy="107" r="7" fill="#d4cfc4"/>
+        </svg>
+      </div>
+      <div class="stat-strip">
+        <div class="stat-cell"><div class="num">80%</div><div class="lbl">of office workers report pain — Scientific Reports, 2025</div></div>
+        <div class="stat-cell"><div class="num">3min</div><div class="lbl">avg read time</div></div>
+        <div class="stat-cell"><div class="num">Free</div><div class="lbl">no paywalls, ever</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars">
+    <div class="sec-label">Why Deskfix</div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>Education before selling</h3>
+        <p>We explain the why before the what. Understand your body, your setup, and what actually causes pain — then decide if a product is worth it.</p>
+        <a href="start-here.html" class="pillar-link">Start learning →</a>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>Research-backed, not hype-driven</h3>
+        <p>Every claim links to a study, a physio, or a credible source. We call out the marketing speak so you don't have to.</p>
+        <a href="blog/" class="pillar-link">Read the blog →</a>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>Honest affiliate picks</h3>
+        <p>Some links earn us a commission. We disclose every one and only recommend products we'd genuinely buy. Our opinion is not for sale.</p>
+        <a href="disclosure.html" class="pillar-link">Read our disclosure →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="picks" id="picks">
+    <div class="sec-label">Top picks this month</div>
+    <div class="picks-grid">
+      <div class="pick-card">
+        <span class="pick-badge">Best chair overall</span>
+        <h3>Ergonofis Sway — the chair we actually recommend</h3>
+        <p>Adjustable lumbar, breathable mesh, quality that holds up. After comparing six chairs in this range, this one stays.</p>
+        <a href="YOUR_AFFILIATE_LINK" class="affiliate-btn" target="_blank" rel="noopener noreferrer sponsored">Check price on Amazon →</a>
+        <span class="affiliate-note">Affiliate link — we may earn a small commission.</span>
+      </div>
+      <div class="pick-card">
+        <span class="pick-badge">Best monitor arm</span>
+        <h3>Ergotron LX — the gold standard for a reason</h3>
+        <p>Smooth, sturdy, holds position. Fixes monitor height in minutes and works with almost any desk.</p>
+        <a href="YOUR_AFFILIATE_LINK" class="affiliate-btn" target="_blank" rel="noopener noreferrer sponsored">Check price on Amazon →</a>
+        <span class="affiliate-note">Affiliate link — we may earn a small commission.</span>
+      </div>
+      <div class="pick-card">
+        <span class="pick-badge">Best budget fix</span>
+        <h3>Laptop stand + external keyboard — the easiest upgrade</h3>
+        <p>Working on a laptop without a stand is one of the top causes of neck pain. This single change fixes it.</p>
+        <a href="YOUR_AFFILIATE_LINK" class="affiliate-btn" target="_blank" rel="noopener noreferrer sponsored">Check price on Amazon →</a>
+        <span class="affiliate-note">Affiliate link — we may earn a small commission.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="posts">
+    <div class="sec-label">Latest from the blog</div>
+    <div class="posts-grid">
+      <div class="post-featured">
+        <div class="post-thumb">
+          <svg width="100" height="70" viewBox="0 0 100 70" fill="none"><rect x="15" y="42" width="70" height="4" rx="1" fill="#d4cfc4"/><rect x="5" y="46" width="90" height="3" rx="1" fill="#c8c3b8"/><rect x="38" y="22" width="24" height="20" rx="2" fill="#e0dbd0"/><rect x="40" y="24" width="20" height="15" rx="1" fill="#3d5a3e" opacity="0.15"/><rect x="44" y="46" width="12" height="8" rx="1" fill="#d4cfc4"/></svg>
+        </div>
+        <div class="post-cat">Desk Setup</div>
+        <div class="post-title">The complete guide to monitor height — and why yours is probably wrong</div>
+        <p class="post-desc">Most people place their monitor too low. It's one of the leading causes of neck pain in remote workers — and it takes 30 seconds to fix.</p>
+        <a href="blog/monitor-height-guide.html" class="read-more">Read article →</a>
+      </div>
+      <div class="post-col">
+        <div class="post-sm">
+          <div class="post-cat">Chair Guide</div>
+          <div class="post-title">Best ergonomic chairs for home office workers — every budget ranked</div>
+          <p class="post-desc">We cut through the noise and found three chairs worth buying.</p>
+          <a href="blog/best-ergonomic-chairs-home-office.html" class="read-more">Read →</a>
+        </div>
+        <div class="post-sm">
+          <div class="post-cat">Research</div>
+          <div class="post-title">What the science actually says about standing desks</div>
+          <p class="post-desc">They're not a cure-all. Here's what the evidence supports.</p>
+          <a href="blog/standing-desk-research.html" class="read-more">Read →</a>
+        </div>
+      </div>
+      <div class="post-col">
+        <div class="post-sm">
+          <div class="post-cat">Quick Fix</div>
+          <div class="post-title">5 free adjustments that will fix your posture today</div>
+          <p class="post-desc">No gear required. Just your current setup and five minutes.</p>
+          <a href="blog/free-posture-fixes.html" class="read-more">Read →</a>
+        </div>
+        <div class="post-sm">
+          <div class="post-cat">Wrists</div>
+          <div class="post-title">Why your wrists hurt — and the keyboard setup that fixes it</div>
+          <p class="post-desc">Carpal tunnel isn't inevitable. Most wrist pain is preventable.</p>
+          <a href="blog/wrist-pain-keyboard-setup.html" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="nl-left">
+      <div class="sec-label">Stay in the loop</div>
+      <h2>Weekly fixes for your home office.</h2>
+      <p>One email a week. Practical ergonomics tips, new research, and honest product picks — written for real people with real desks, not corporate wellness budgets.</p>
+    </div>
+    <div class="nl-right">
+      <p>Join readers who've already improved their setup. No spam, unsubscribe anytime.</p>
+      <form action="https://app.kit.com/forms/9427125/subscriptions" method="POST">
+        <div class="form-col">
+          <input type="text" name="first_name" placeholder="First name (optional)">
+          <input type="email" name="email_address" placeholder="Your email address" required>
+          <button type="submit">Get weekly tips →</button>
+        </div>
+      </form>
+      <p class="fine">By subscribing you agree to our <a href="privacy-policy.html">privacy policy</a>. We never sell your data.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Deskfix</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="blog/">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="disclosure.html">Disclosure</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Deskfix</div>
+  </footer>
+
+</body>
+</html>

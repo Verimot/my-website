@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Deskfix</title>
+  <meta property="og:title" content="Blog — Deskfix">
+  <meta property="og:description" content="Ergonomics guides, product reviews, and research-backed advice for remote workers.">
+  <meta property="og:url" content="https://deskfix.blog/blog/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+  <link rel="shortcut icon" href="../assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/android-chrome-512x512.png">
+  <link rel="manifest" href="../assets/icons/site.webmanifest">
+
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-grid {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      background: var(--stone);
+      border: 1px solid var(--stone);
+    }
+    .blog-card {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .blog-card:hover { background: var(--mist); }
+    .card-thumb {
+      width: 100%;
+      height: 200px;
+      background: var(--mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-cat { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.5rem; font-weight: 500; }
+    .card-title { font-family: var(--serif); font-size: 1.2rem; color: var(--ink); line-height: 1.25; margin-bottom: 0.6rem; }
+    .card-desc { font-size: 0.87rem; color: var(--bark); line-height: 1.6; font-weight: 300; flex: 1; }
+    .card-meta { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bark); margin-top: 1rem; }
+    .card-read { display: inline-block; margin-top: 1rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss); border-bottom: 1px solid var(--moss); padding-bottom: 1px; }
+    .categories { padding: 1.5rem 2.5rem; border-bottom: 1px solid var(--stone); display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .cat-pill { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 0.85rem; border: 1px solid var(--stone); color: var(--bark); transition: border-color 0.2s, color 0.2s; cursor: pointer; }
+    .cat-pill:hover, .cat-pill.active { border-color: var(--moss); color: var(--moss); }
+    .cat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark); margin-right: 0.5rem; }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19JX55D3QB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-19JX55D3QB');
+</script>
+</head>
+<body>
+
+  <div class="disclosure-bar">
+    <p>Some links on this site are affiliate links — we may earn a commission at no extra cost to you.</p>
+    <a href="../disclosure.html">Read our full disclosure</a>
+  </div>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">Deskfix</a>
+    <div class="nav-links">
+      <a href="index.html">Blog</a>
+      <a href="../index.html#picks">Top Picks</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../about.html">About</a>
+      <a href="../start-here.html" class="nav-cta">Free Guide →</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="eyebrow">The Blog</span>
+    <h1>Reads Worth Your Time</h1>
+    <p>Ergonomics guides, honest product reviews, and the research behind a healthier desk life.</p>
+  </div>
+
+  <div class="categories">
+    <span class="cat-label">Filter:</span>
+    <span class="cat-pill active">All</span>
+    <span class="cat-pill">Desk Setup</span>
+    <span class="cat-pill">Chair Guides</span>
+    <span class="cat-pill">Quick Fixes</span>
+    <span class="cat-pill">Research</span>
+    <span class="cat-pill">Education</span>
+  </div>
+
+  <main class="blog-grid">
+
+    <a href="complete-home-office-ergonomics-guide.html" class="blog-card">
+      <div class="card-thumb"></div>
+      <div class="card-body">
+        <span class="card-cat">Education</span>
+        <div class="card-title">How to set up your home office ergonomically — a complete, no-fluff guide</div>
+        <p class="card-desc">Chair, desk, monitor, keyboard, lighting. Every element covered in the order it matters. Start here if you're new.</p>
+        <span class="card-meta">2026 · 8 min read</span>
+        <span class="card-read">Read article →</span>
+      </div>
+    </a>
+
+    <a href="why-your-body-hurts-at-your-desk.html" class="blog-card">
+      <div class="card-thumb"></div>
+      <div class="card-body">
+        <span class="card-cat">Education</span>
+        <div class="card-title">Why your body hurts after a day at your desk — and why it's not just part of the job</div>
+        <p class="card-desc">Most desk pain isn't inevitable. It's a setup problem — and setup problems are fixable.</p>
+        <span class="card-meta">2026 · 6 min read</span>
+        <span class="card-read">Read article →</span>
+      </div>
+    </a>
+
+    <a href="best-ergonomic-chairs-home-office.html" class="blog-card">
+      <div class="card-thumb"></div>
+      <div class="card-body">
+        <span class="card-cat">Chair Guide</span>
+        <div class="card-title">The best ergonomic chairs for a home office — every budget, ranked honestly</div>
+        <p class="card-desc">Three tiers, one honest pick at each level. No filler, no pay-to-play placements.</p>
+        <span class="card-meta">2026 · 7 min read</span>
+        <span class="card-read">Read article →</span>
+      </div>
+    </a>
+
+    <a href="best-monitor-arms-home-office.html" class="blog-card">
+      <div class="card-thumb"></div>
+      <div class="card-body">
+        <span class="card-cat">Desk Setup</span>
+        <div class="card-title">The best monitor arms for a home office — the upgrade most people have never considered</div>
+        <p class="card-desc">A monitor arm might be the highest-return ergonomics purchase you can make. Here's which one to buy.</p>
+        <span class="card-meta">2026 · 5 min read</span>
+        <span class="card-read">Read article →</span>
+      </div>
+    </a>
+
+    <a href="best-laptop-stands-working-from-home.html" class="blog-card">
+      <div class="card-thumb"></div>
+      <div class="card-body">
+        <span class="card-cat">Desk Setup</span>
+        <div class="card-title">The best laptop stands for working from home — the fix most people are missing</div>
+        <p class="card-desc">Working on a flat laptop is doing damage you haven't noticed yet. Here's the fix and which stand to buy.</p>
+        <span class="card-meta">2026 · 5 min read</span>
+        <span class="card-read">Read article →</span>
+      </div>
+    </a>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">Deskfix</div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="index.html">Blog</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../disclosure.html">Disclosure</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Deskfix</div>
+  </footer>
+
+</body>
+</html>
