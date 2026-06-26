@@ -46,6 +46,22 @@
     .post-newsletter button { background: var(--rust); color: #fff; border: none; padding: 0.75rem 1.25rem; font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
     .post-newsletter button:hover { background: #9e4e2e; }
     .post-newsletter .fine { font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-top: 0.75rem; }
+
+    /* Hero image */
+    .post-hero { width: 100%; height: 400px; overflow: hidden; margin-bottom: 2.5rem; background: var(--mist); }
+    .post-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .post-wrap { padding: 2rem 1.25rem 3rem; }
+      .post-hero { height: 240px; }
+      .post-header h1 { font-size: 1.75rem; }
+      .cta-block { flex-direction: column; align-items: flex-start; }
+      .post-newsletter { padding: 2rem 1.25rem; }
+      .post-newsletter form { flex-direction: column; }
+      .post-newsletter input { width: 100%; }
+      .post-newsletter button { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -75,6 +91,19 @@
       <h1>The Best Ergonomic Chairs for a Home Office — Every Budget, Ranked Honestly</h1>
       <p class="subtitle">Three tiers, one honest pick at each level. No filler, no pay-to-play placements.</p>
       <span class="post-meta">By Deskfix &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; 7 min read</span>
+    </div>
+
+    <img src="../assets/images/hero-chairs.jpg"
+         alt="Ergonomic office chair at a clean home desk"
+         width="100%" loading="lazy"
+         style="display:block;max-width:100%;height:360px;object-fit:cover;margin-bottom:2.5rem;">
+
+    <div class="post-hero">
+      <img
+        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80&auto=format&fit=crop&crop=center"
+        alt="Ergonomic office chair in a modern home office"
+        loading="lazy"
+      >
     </div>
 
     <div class="disclosure-box">
