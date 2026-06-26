@@ -49,6 +49,13 @@
     .form-submit { background: var(--moss); color: #fff; border: none; padding: 0.85rem 2rem; font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.2s; width: 100%; }
     .form-submit:hover { background: #2d4530; }
     .form-note { font-size: 0.72rem; color: var(--bark); margin-top: 0.75rem; font-weight: 300; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-info { border-right: none; border-bottom: 1px solid var(--stone); padding: 2rem 1.25rem; }
+      .contact-form-wrap { padding: 2rem 1.25rem; }
+    }
   </style>
 </head>
 <body>
