@@ -180,4 +180,3 @@ footer {
 .page-hero .eyebrow { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.75rem; font-weight: 500; display: block; }
 .page-hero h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); color: var(--ink); line-height: 1.15; margin-bottom: 1rem; }
 .page-hero p { color: var(--bark); font-style: italic; font-size: 1.05rem; max-width: 500px; margin: 0 auto; font-weight: 300; }
-
