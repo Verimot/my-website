@@ -180,3 +180,101 @@ footer {
 .page-hero .eyebrow { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.75rem; font-weight: 500; display: block; }
 .page-hero h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); color: var(--ink); line-height: 1.15; margin-bottom: 1rem; }
 .page-hero p { color: var(--bark); font-style: italic; font-size: 1.05rem; max-width: 500px; margin: 0 auto; font-weight: 300; }
+
+/* ══════════════════════════════════════════
+   GLOBAL MOBILE  (≤ 768px)
+   Page-specific overrides live in each file's
+   inline <style> block.
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Disclosure bar: stack text + link */
+  .disclosure-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 1.25rem;
+    gap: 0.2rem;
+  }
+
+  /* Nav: wrap links on smaller screens */
+  nav { padding: 1rem 1.25rem; }
+  .nav-links { gap: 0.75rem 1.1rem; flex-wrap: wrap; }
+  .nav-links a { font-size: 0.75rem; }
+
+  /* Footer: stack items */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.25rem;
+  }
+  .footer-links { gap: 0.75rem 1.1rem; }
+
+  /* Page hero */
+  .page-hero { padding: 2.5rem 1.25rem 2rem; }
+
+  /* Prose pages */
+  .prose { padding: 2rem 1.25rem 3rem; }
+  .prose h2 { font-size: 1.4rem; }
+
+  /* Images always fill container */
+  img { max-width: 100%; height: auto; }
+}
+
+/* ── Very small screens (≤ 480px) ── */
+@media (max-width: 480px) {
+  /* Hide all nav links except the CTA to save space */
+  .nav-links a:not(.nav-cta) { display: none; }
+  .nav-logo { font-size: 1.25rem; }
+
+  /* Full-width affiliate buttons */
+  .affiliate-btn { display: block; text-align: center; }
+}
+
+/* ═══════════════════════════════════════
+   MOBILE RESPONSIVE
+═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  /* Disclosure bar */
+  .disclosure-bar {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  /* Nav */
+  nav {
+    padding: 0.9rem 1.25rem;
+  }
+  .nav-links {
+    gap: 0.75rem;
+  }
+  .nav-links a { font-size: 0.72rem; }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  .footer-links { justify-content: center; gap: 1rem; }
+
+  /* Disclosure box in posts */
+  .disclosure-box { font-size: 0.8rem; padding: 0.85rem 1rem; }
+}
+
+@media (max-width: 520px) {
+  /* Collapse all nav links except the CTA */
+  .nav-links a:not(.nav-cta) { display: none; }
+  nav { padding: 0.8rem 1rem; }
+  .nav-logo { font-size: 1.3rem; }
+
+  /* Prose */
+  .prose { padding: 2rem 1.25rem 3rem; }
+
+  /* Affiliate button */
+  .affiliate-btn { display: block; text-align: center; }
+}
