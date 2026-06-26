@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Deskfix</title>
-  <meta property="og:title" content="About Deskfix">
-  <meta property="og:description" content="Why Deskfix exists and what you can expect from this site.">
+  <meta property="og:title" content="About Deskfix — Why This Site Exists">
+  <meta property="og:description" content="Deskfix started in school. A teacher explained ergonomics properly. This site is what came out of that — practical, honest, and always free.">
   <meta property="og:url" content="https://deskfix.blog/about.html">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -18,19 +18,320 @@
 
   <link rel="stylesheet" href="style.css">
   <style>
-    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 0; border-bottom: 1px solid var(--stone); }
-    .about-sidebar { padding: 3rem 2rem; border-right: 1px solid var(--stone); background: var(--mist); display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .avatar-large { width: 120px; height: 120px; border-radius: 50%; background: var(--moss); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 3.5rem; color: #fff; margin-bottom: 1.25rem; }
-    .about-sidebar h2 { font-family: var(--serif); font-size: 1.3rem; color: var(--ink); margin-bottom: 0.25rem; }
-    .about-sidebar .role { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark); margin-bottom: 1.5rem; }
-    .sidebar-links { display: flex; flex-direction: column; gap: 0.6rem; width: 100%; margin-top: auto; }
-    .sidebar-links a { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark); border: 1px solid var(--stone); padding: 0.5rem; text-align: center; transition: border-color 0.2s, color 0.2s; }
-    .sidebar-links a:hover { border-color: var(--moss); color: var(--moss); }
-    .about-content { padding: 3rem 2.5rem; }
-    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--stone); border: 1px solid var(--stone); margin: 2rem 0; }
-    .value-cell { background: var(--cream); padding: 1.5rem; }
-    .value-cell h4 { font-family: var(--serif); font-size: 1rem; color: var(--ink); margin-bottom: 0.4rem; }
-    .value-cell p { font-size: 0.85rem; color: var(--bark); font-weight: 300; line-height: 1.6; }
+
+    /* ── Hero ── */
+    .about-hero {
+      padding: 5rem 2.5rem 4.5rem;
+      border-bottom: 1px solid var(--stone);
+      text-align: center;
+      background: var(--cream);
+    }
+    .about-hero .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .about-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.75rem);
+      color: var(--ink);
+      line-height: 1.08;
+      max-width: 780px;
+      margin: 0 auto 1.5rem;
+    }
+    .about-hero h1 em { font-style: italic; color: var(--moss); }
+    .about-hero .lead {
+      font-size: 1.05rem;
+      color: var(--bark);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Full-width photo ── */
+    .about-photo {
+      border-bottom: 1px solid var(--stone);
+      overflow: hidden;
+      height: 420px;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    /* ── Story section ── */
+    .about-story {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      border-bottom: 1px solid var(--stone);
+    }
+    .story-aside {
+      padding: 3.5rem 2.5rem;
+      border-right: 1px solid var(--stone);
+      background: var(--mist);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .pull-quote {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      color: var(--moss);
+      line-height: 1.3;
+      font-style: italic;
+    }
+    .story-meta { margin-top: auto; }
+    .story-meta p {
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bark);
+      line-height: 1.6;
+    }
+    .story-meta a {
+      color: var(--moss);
+      border-bottom: 1px solid var(--moss);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.6rem;
+      display: inline-block;
+    }
+    .story-body {
+      padding: 3.5rem 2.5rem;
+    }
+    .story-body p {
+      font-size: 1.02rem;
+      color: var(--ink);
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+    .story-body p:last-child { margin-bottom: 0; }
+
+    /* ── Values ── */
+    .about-values {
+      padding: 3.5rem 2.5rem;
+      border-bottom: 1px solid var(--stone);
+    }
+    .values-intro {
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+    .values-intro h2 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+    .values-intro p {
+      font-size: 0.95rem;
+      color: var(--bark);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    .values-list { border-top: 1px solid var(--stone); }
+    .value-row {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--stone);
+    }
+    .value-row:last-child { border-bottom: none; }
+    .value-num {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      color: var(--stone);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 3.5rem;
+      padding-top: 0.1rem;
+    }
+    .value-body h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .value-body p {
+      font-size: 0.92rem;
+      color: var(--bark);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── Stat strip ── */
+    .about-stats {
+      display: flex;
+      border-bottom: 1px solid var(--stone);
+      background: var(--warm);
+    }
+    .about-stat {
+      flex: 1;
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--stone);
+      text-align: center;
+    }
+    .about-stat:last-child { border-right: none; }
+    .about-stat .stat-num {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      color: var(--moss);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .about-stat .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bark);
+      font-weight: 400;
+    }
+
+    /* ── CTA ── */
+    .about-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--stone);
+    }
+    .cta-left {
+      padding: 3.5rem 2.5rem;
+      background: var(--moss);
+      border-right: 1px solid var(--stone);
+    }
+    .cta-left h2 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .cta-left p {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .cta-left .btn-white {
+      display: inline-block;
+      background: #fff;
+      color: var(--moss);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .cta-left .btn-white:hover { opacity: 0.88; }
+    .cta-right {
+      padding: 3.5rem 2.5rem;
+      background: var(--mist);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cta-right h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .cta-right > p {
+      font-size: 0.88rem;
+      color: var(--bark);
+      font-weight: 300;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .cta-form { display: flex; flex-direction: column; gap: 0.6rem; max-width: 380px; }
+    .cta-form input {
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--stone);
+      background: var(--cream);
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .cta-form input:focus { border-color: var(--moss); }
+    .cta-form input::placeholder { color: #b0a090; }
+    .cta-form button {
+      background: var(--rust);
+      color: #fff;
+      border: none;
+      padding: 0.8rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-form button:hover { background: #9e4e2e; }
+    .cta-fine {
+      font-size: 0.67rem;
+      color: var(--bark);
+      margin-top: 0.4rem;
+      font-weight: 300;
+    }
+    .contact-line {
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid var(--stone);
+      flex-wrap: wrap;
+    }
+    .contact-line p {
+      font-size: 0.9rem;
+      color: var(--bark);
+      font-weight: 300;
+    }
+    .contact-line a {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--moss);
+      border-bottom: 1px solid var(--moss);
+      white-space: nowrap;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .about-hero { padding: 3rem 1.25rem 2.5rem; }
+      .about-photo { height: 260px; }
+      .about-story { grid-template-columns: 1fr; }
+      .story-aside { border-right: none; border-bottom: 1px solid var(--stone); padding: 2rem 1.25rem; }
+      .story-meta { margin-top: 1.5rem; }
+      .story-body { padding: 2rem 1.25rem; }
+      .about-values { padding: 2rem 1.25rem; }
+      .value-row { gap: 1.5rem; }
+      .value-num { width: 2.5rem; font-size: 2rem; }
+      .about-stats { flex-direction: column; }
+      .about-stat { border-right: none; border-bottom: 1px solid var(--stone); padding: 1.75rem 1.25rem; }
+      .about-stat:last-child { border-bottom: none; }
+      .about-cta { grid-template-columns: 1fr; }
+      .cta-left { border-right: none; border-bottom: 1px solid var(--stone); padding: 2.5rem 1.25rem; }
+      .cta-right { padding: 2rem 1.25rem; }
+      .contact-line { padding: 1.5rem 1.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -51,29 +352,37 @@
     </div>
   </nav>
 
-  <div class="page-hero">
+  <!-- Hero -->
+  <div class="about-hero">
     <span class="eyebrow">About Deskfix</span>
-    <h1>Why this site exists</h1>
-    <p>Built by someone who caught the problem early — and didn't want others to wait until it was too late.</p>
+    <h1>Most desk pain is <em>completely preventable.</em><br>We exist to prove it.</h1>
+    <p class="lead">Practical ergonomics education, honest product picks, and the research behind why your body feels the way it does after a long day at your desk. Always free. No agenda beyond helping you feel better.</p>
+    <div class="hero-actions">
+      <a href="start-here.html" class="btn-primary">Start here →</a>
+      <a href="blog/" class="btn-secondary">Read the blog</a>
+    </div>
   </div>
 
-  <div class="about-grid">
-    <div class="about-sidebar">
-      <div class="avatar-large">D</div>
-      <h2>Deskfix</h2>
-      <span class="role">Ergonomics for remote workers</span>
-      <div class="sidebar-links">
-        <a href="contact.html">Get in touch</a>
-        <a href="start-here.html">Free starter guide</a>
-        <a href="https://www.instagram.com/deskfix.blog" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.tiktok.com/@deskfix.blog" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://www.pinterest.com/deskfixblog" target="_blank" rel="noopener noreferrer">Pinterest</a>
+  <!-- Photo -->
+  <div class="about-photo">
+    <img
+      src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80&auto=format&fit=crop&crop=center"
+      alt="Clean, comfortable home office setup with good ergonomics"
+      loading="lazy"
+    >
+  </div>
+
+  <!-- Story -->
+  <div class="about-story">
+    <div class="story-aside">
+      <p class="pull-quote">"I was young enough that the damage hadn't set in — but aware enough to know it would, if nothing changed."</p>
+      <div class="story-meta">
+        <p>Published in 2026</p>
+        <a href="contact.html">Get in touch →</a>
       </div>
     </div>
-
-    <div class="about-content">
+    <div class="story-body">
       <div class="sec-label">The story</div>
-
       <p>
         Deskfix started in school — not a side hustle brainstorm, not a business plan. A teacher took twenty minutes to properly explain posture and ergonomics, and something clicked. I was in a program that meant spending entire days at a computer, and I could already feel what bad habits were building: tightness in the wrists, tension in the lower back, the general physical toll of too much sitting with no awareness of how I was doing it.
       </p>
@@ -86,39 +395,86 @@
       <p>
         Deskfix is what came out of that. Most ergonomics content online is either buried in academic papers or written to sell you the most expensive chair on the market. There's very little that's practical, honest, and aimed at people who just work at a desk and want to feel better doing it. That's the gap this site is trying to fill.
       </p>
+    </div>
+  </div>
 
-      <h2>What you'll find here</h2>
-      <p>
-        Education first, products second. We explain the mechanics behind desk pain before recommending anything. When we do recommend a product, we tell you why — and when the evidence doesn't support a claim, we say that too.
-      </p>
-      <p>
-        Some links on this site are Amazon affiliate links. If you buy through one, we earn a small commission at no extra cost to you. It keeps the site running and free to read. We only link to things we'd genuinely point a friend toward.
-      </p>
+  <!-- Stats -->
+  <div class="about-stats">
+    <div class="about-stat">
+      <span class="stat-num">80%</span>
+      <span class="stat-label">of office workers report chronic pain — Scientific Reports, 2025</span>
+    </div>
+    <div class="about-stat">
+      <span class="stat-num">Free</span>
+      <span class="stat-label">Every guide, every article — no paywalls, ever</span>
+    </div>
+    <div class="about-stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Disclosed — every affiliate link, every time</span>
+    </div>
+  </div>
 
-      <div class="values-grid">
-        <div class="value-cell">
-          <h4>Education first</h4>
-          <p>Understand the why before you buy anything. Knowledge is free and often more effective than gear.</p>
-        </div>
-        <div class="value-cell">
-          <h4>Honest reviews</h4>
-          <p>If something isn't worth buying, we say so. Recommendations reflect what we actually believe, not what earns the highest commission.</p>
-        </div>
-        <div class="value-cell">
-          <h4>Plain language</h4>
-          <p>No jargon, no academic walls of text. Just clear, practical information anyone can act on today.</p>
-        </div>
-        <div class="value-cell">
-          <h4>Always free</h4>
-          <p>No paywalls, no premium tiers. Everything on Deskfix is free to read, always.</p>
+  <!-- Values -->
+  <div class="about-values">
+    <div class="values-intro">
+      <h2>What we stand for</h2>
+      <p>Four things guide everything published on Deskfix. They're not marketing copy — they're the actual reasons this site was built the way it was.</p>
+    </div>
+    <div class="values-list">
+      <div class="value-row">
+        <div class="value-num">01</div>
+        <div class="value-body">
+          <h3>Education before selling</h3>
+          <p>We explain the mechanics of desk pain before recommending anything. Understand your body first — then decide if a product is worth it. Knowledge is free and often more effective than gear.</p>
         </div>
       </div>
-
-      <p>
-        If you have a question, found an error, or just want to talk desks — <a href="contact.html" style="color:var(--moss);border-bottom:1px solid var(--moss)">get in touch</a>. Every message gets read.
-      </p>
-
+      <div class="value-row">
+        <div class="value-num">02</div>
+        <div class="value-body">
+          <h3>Honest reviews, no pay-to-play</h3>
+          <p>If something isn't worth buying, we say so. Some links on this site are affiliate links — if you buy through one, we earn a small commission at no extra cost to you. Our recommendations reflect what we'd actually tell a friend. Our opinion is not for sale.</p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">03</div>
+        <div class="value-body">
+          <h3>Plain language, cited claims</h3>
+          <p>No jargon, no academic walls of text. Clear, practical information anyone can act on today. When we cite research, we link to it. When the evidence doesn't support a claim, we say that too.</p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">04</div>
+        <div class="value-body">
+          <h3>Always free, no paywalls</h3>
+          <p>Everything on Deskfix is free to read, always. The site is supported by affiliate commissions on the products we recommend — nothing else. No premium tier, no subscription, no pop-ups asking for money.</p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="about-cta">
+    <div class="cta-left">
+      <h2>Ready to fix your setup?</h2>
+      <p>Start with the free guide. Most people improve their posture and reduce tension in under ten minutes — before buying anything.</p>
+      <a href="start-here.html" class="btn-white">Read the free guide →</a>
+    </div>
+    <div class="cta-right">
+      <h3>Get weekly tips</h3>
+      <p>One email a week — ergonomics tips, new research, and honest product picks for remote workers.</p>
+      <form action="https://app.kit.com/forms/9427125/subscriptions" method="POST" class="cta-form">
+        <input type="text" name="first_name" placeholder="First name (optional)">
+        <input type="email" name="email_address" placeholder="Your email address" required>
+        <button type="submit">Subscribe — it's free →</button>
+      </form>
+      <p class="cta-fine">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <!-- Contact line -->
+  <div class="contact-line">
+    <p>Have a question, found an error, or just want to talk desks?</p>
+    <a href="contact.html">Get in touch →</a>
   </div>
 
   <footer>

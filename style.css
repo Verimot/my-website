@@ -117,7 +117,13 @@ nav {
   text-transform: uppercase;
   font-weight: 500;
   transition: background 0.2s;
+  border-bottom: none;
 }
+/* Force white text even when nested inside .post-body a rules */
+.affiliate-btn,
+a.affiliate-btn,
+.post-body .affiliate-btn,
+.cta-block .affiliate-btn { color: #fff; border-bottom: none; }
 .affiliate-btn:hover { background: #9e4e2e; color: #fff; }
 
 .read-more {
