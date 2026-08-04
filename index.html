@@ -120,6 +120,30 @@
       .post-thumb { height: 140px; }
     }
   </style>
+  <meta name="description" content="Practical ergonomics for remote workers. Honest product reviews, research-backed desk setup guides, and the science behind why your body hurts after a day at your desk.">
+  <link rel="canonical" href="https://deskfix.blog/">  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://deskfix.blog/#website",
+      "url": "https://deskfix.blog/",
+      "name": "Deskfix",
+      "description": "Practical ergonomics for remote workers",
+      "publisher": { "@id": "https://deskfix.blog/#organization" },
+      "potentialAction": { "@type": "SearchAction", "target": { "@type": "EntryPoint", "urlTemplate": "https://deskfix.blog/?s={search_term_string}" }, "query-input": "required name=search_term_string" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://deskfix.blog/#organization",
+      "name": "Deskfix",
+      "url": "https://deskfix.blog/",
+      "logo": { "@type": "ImageObject", "url": "https://deskfix.blog/assets/icons/android-chrome-512x512.png" }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -138,6 +162,88 @@
       <a href="start-here.html" class="nav-cta">Free Guide →</a>
     </div>
   </nav>
+
+<!-- PRODUCT CAROUSEL -->
+<section class="carousel-section" aria-label="Product recommendations">
+  <div class="carousel-header">
+    <span class="carousel-label">Our top picks</span>
+    <div class="carousel-arrows">
+      <button class="carousel-arrow" id="carPrev" aria-label="Previous products">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="carousel-arrow" id="carNext" aria-label="Next products">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" id="carTrack">
+      <a class="carousel-card" href="https://www.amazon.com/dp/B09RDGFVYM/?tag=deskfix-20" target="_blank" rel="noopener noreferrer sponsored">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&h=400&q=80" alt="Ergonofis Sway ergonomic chair" loading="lazy">
+        <div class="carousel-card-body">
+          <div class="carousel-card-name">Ergonofis Sway</div>
+          <span class="carousel-card-cta">View on Amazon →</span>
+        </div>
+      </a>
+      <a class="carousel-card" href="https://www.amazon.com/dp/B0C15C11D9/?tag=deskfix-20" target="_blank" rel="noopener noreferrer sponsored">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&h=400&q=80" alt="Branch Ergonomic Chair" loading="lazy">
+        <div class="carousel-card-body">
+          <div class="carousel-card-name">Branch Ergonomic Chair</div>
+          <span class="carousel-card-cta">View on Amazon →</span>
+        </div>
+      </a>
+      <a class="carousel-card" href="https://www.amazon.com/dp/B07Q8TJ2KL/?tag=deskfix-20" target="_blank" rel="noopener noreferrer sponsored">
+        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=400&h=400&q=80" alt="Ergotron LX monitor arm" loading="lazy">
+        <div class="carousel-card-body">
+          <div class="carousel-card-name">Ergotron LX Monitor Arm</div>
+          <span class="carousel-card-cta">View on Amazon →</span>
+        </div>
+      </a>
+      <a class="carousel-card" href="https://www.amazon.com/dp/B000OOYECC/?tag=deskfix-20" target="_blank" rel="noopener noreferrer sponsored">
+        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=400&h=400&q=80" alt="Rain Design mStand laptop stand" loading="lazy">
+        <div class="carousel-card-body">
+          <div class="carousel-card-name">Rain Design mStand</div>
+          <span class="carousel-card-cta">View on Amazon →</span>
+        </div>
+      </a>
+      <a class="carousel-card" href="https://www.amazon.com/dp/B0BKW3LB2B/?tag=deskfix-20" target="_blank" rel="noopener noreferrer sponsored">
+        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&h=400&q=80" alt="Logitech MX Keys keyboard" loading="lazy">
+        <div class="carousel-card-body">
+          <div class="carousel-card-name">Logitech MX Keys</div>
+          <span class="carousel-card-cta">View on Amazon →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<script>
+  (function () {
+    var track = document.getElementById('carTrack');
+    var prev  = document.getElementById('carPrev');
+    var next  = document.getElementById('carNext');
+    if (!track) return;
+    var idx = 0, timer;
+    function cardW() { return track.children[0].offsetWidth + 14; }
+    function visible() { return window.innerWidth <= 420 ? 1 : window.innerWidth <= 768 ? 2 : 4; }
+    function maxIdx() { return Math.max(0, track.children.length - visible()); }
+    function goTo(n) {
+      idx = n;
+      track.style.transform = 'translateX(-' + (idx * cardW()) + 'px)';
+      prev.disabled = idx === 0;
+      next.disabled = idx >= maxIdx();
+    }
+    function advance() { goTo(idx >= maxIdx() ? 0 : idx + 1); }
+    function startAuto() { timer = setInterval(advance, 3500); }
+    function stopAuto()  { clearInterval(timer); }
+    prev.addEventListener('click', function () { stopAuto(); if (idx > 0) goTo(idx - 1); startAuto(); });
+    next.addEventListener('click', function () { stopAuto(); if (idx < maxIdx()) goTo(idx + 1); startAuto(); });
+    track.parentElement.parentElement.addEventListener('mouseenter', stopAuto);
+    track.parentElement.parentElement.addEventListener('mouseleave', startAuto);
+    window.addEventListener('resize', function () { goTo(Math.min(idx, maxIdx())); });
+    goTo(0);
+    startAuto();
+  })();
+</script>
 
   <section class="hero">
     <div class="hero-left">
