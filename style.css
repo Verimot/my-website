@@ -238,3 +238,116 @@ footer {
 
 /* disclosure-box mobile handled in global block above */
 .disclosure-box { font-size: 0.84rem; }
+
+/* ══════════════════════════════════════════
+   BLOG POST SHARED STYLES
+══════════════════════════════════════════ */
+.post-wrap { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+.back-link { display: inline-block; margin-bottom: 2rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark); border-bottom: 1px solid var(--bark); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.back-link:hover { color: var(--moss); border-color: var(--moss); }
+.post-header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--stone); }
+.post-header .category { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rust); margin-bottom: 1rem; display: block; font-weight: 500; }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); color: var(--ink); line-height: 1.15; margin-bottom: 1rem; }
+.post-header .subtitle { font-style: italic; color: var(--bark); font-size: 1.05rem; margin-bottom: 1.5rem; font-weight: 300; }
+.post-meta { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark); }
+.post-body h2 { font-family: var(--serif); font-size: 1.75rem; color: var(--ink); margin: 2.5rem 0 0.75rem; line-height: 1.2; }
+.post-body h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--ink); font-style: italic; margin: 2rem 0 0.5rem; }
+.post-body p { font-size: 1.02rem; color: var(--ink); font-weight: 300; line-height: 1.8; margin-bottom: 1.5rem; }
+.post-body ul, .post-body ol { margin: 0 0 1.5rem 1.5rem; }
+.post-body li { font-size: 1.02rem; color: var(--ink); font-weight: 300; line-height: 1.7; margin-bottom: 0.5rem; }
+.post-body strong { font-weight: 500; }
+.post-body a { color: var(--moss); border-bottom: 1px solid var(--moss); }
+.cta-block { background: var(--mist); border: 1px solid var(--stone); padding: 1.5rem; margin: 2rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.cta-block p { font-size: 0.92rem; color: var(--ink); font-weight: 400; margin: 0; flex: 1; }
+.cta-block .affiliate-btn { white-space: nowrap; }
+.cta-note { font-size: 0.7rem; color: var(--bark); font-style: italic; margin-top: 0.5rem; display: block; }
+.post-hero { width: 100%; height: 400px; overflow: hidden; margin-bottom: 2.5rem; background: var(--mist); }
+.post-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.post-newsletter { background: var(--moss); padding: 2.5rem; margin-top: 4rem; text-align: center; }
+.post-newsletter h3 { font-family: var(--serif); font-size: 1.6rem; color: #fff; margin-bottom: 0.5rem; }
+.post-newsletter p { color: rgba(255,255,255,0.75); font-size: 0.9rem; font-weight: 300; margin-bottom: 1.5rem; }
+.post-newsletter form { display: flex; gap: 0; max-width: 420px; margin: 0 auto; }
+.post-newsletter input { flex: 1; padding: 0.75rem 1rem; border: none; font-family: var(--sans); font-size: 0.88rem; outline: none; }
+.post-newsletter button { background: var(--rust); color: #fff; border: none; padding: 0.75rem 1.25rem; font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+.post-newsletter button:hover { background: #9e4e2e; }
+.post-newsletter .fine { font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-top: 0.75rem; }
+
+@media (max-width: 768px) {
+  .post-wrap { padding: 2rem 1.25rem 3rem; }
+  .post-hero { height: 240px; }
+  .post-header h1 { font-size: 1.75rem; }
+  .cta-block { flex-direction: column; align-items: flex-start; }
+  .post-newsletter { padding: 2rem 1.25rem; }
+  .post-newsletter form { flex-direction: column; max-width: 100%; }
+  .post-newsletter input { width: 100%; }
+  .post-newsletter button { width: 100%; }
+}
+
+/* ══════════════════════════════════════════
+   PRODUCT CAROUSEL (all pages)
+══════════════════════════════════════════ */
+.carousel-section {
+  background: #fffdf9;
+  border-bottom: 1px solid var(--stone);
+  padding: 16px 0 20px;
+}
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem 12px;
+}
+.carousel-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bark);
+}
+.carousel-arrows { display: flex; gap: 6px; }
+.carousel-arrow {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--stone);
+  background: var(--cream);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  color: var(--ink);
+}
+.carousel-arrow:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.carousel-arrow:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+.carousel-track-wrap { overflow: hidden; padding: 0 2.5rem; }
+.carousel-track {
+  display: flex;
+  gap: 14px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.carousel-card {
+  flex: 0 0 calc((100% - 42px) / 4);
+  background: #fffdf9;
+  border: 1px solid var(--stone);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.carousel-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.carousel-card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: var(--stone); }
+.carousel-card-body { padding: 11px 13px 13px; }
+.carousel-card-name { font-family: var(--serif); font-size: 0.88rem; color: var(--ink); line-height: 1.3; margin-bottom: 5px; }
+.carousel-card-cta { font-size: 0.67rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--rust); }
+
+@media (max-width: 768px) {
+  .carousel-header { padding: 0 1.25rem 12px; }
+  .carousel-track-wrap { padding: 0 1.25rem; }
+  .carousel-card { flex: 0 0 calc((100% - 14px) / 2); }
+}
+@media (max-width: 420px) {
+  .carousel-card { flex: 0 0 82%; }
+}
