@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Deskfix</title>
+  
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="shortcut icon" href="assets/icons/favicon.ico">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
+
+<link rel="manifest" href="assets/icons/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .not-found {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      border-bottom: 1px solid var(--stone);
+    }
+    .not-found .big-num {
+      font-family: var(--serif);
+      font-size: clamp(6rem, 15vw, 10rem);
+      color: var(--stone);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .not-found h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .not-found p {
+      color: var(--bark);
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 440px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .not-found-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .helpful-links {
+      padding: 3rem 2.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .helpful-links h2 { font-family: var(--serif); font-size: 1.4rem; color: var(--ink); margin-bottom: 1.5rem; }
+    .link-list { display: flex; flex-direction: column; gap: 1px; background: var(--stone); border: 1px solid var(--stone); }
+    .link-list a { background: var(--cream); padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.92rem; color: var(--ink); transition: background 0.15s; }
+    .link-list a:hover { background: var(--mist); }
+    .link-list a span { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bark); }
+  </style>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Deskfix</a>
+    <div class="nav-links">
+      <a href="blog/">Blog</a>
+      <a href="index.html#picks">Top Picks</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="start-here.html" class="nav-cta">Free Guide →</a>
+    </div>
+  </nav>
+
+  <div class="not-found">
+    <div class="big-num">404</div>
+    <h1>This page doesn't exist.</h1>
+    <p>The link might be broken, the page may have moved, or you may have typed the URL incorrectly. Either way, your back still hurts — let's get you somewhere useful.</p>
+    <div class="not-found-links">
+      <a href="index.html" class="btn-primary">Go to homepage →</a>
+      <a href="blog/" class="btn-secondary">Browse the blog</a>
+    </div>
+  </div>
+
+  <div class="helpful-links">
+    <div class="sec-label">Popular pages</div>
+    <div class="link-list">
+      <a href="start-here.html">Free Ergonomics Starter Guide <span>Start here →</span></a>
+      <a href="blog/">All Blog Posts <span>Browse →</span></a>
+      <a href="resources.html">Recommended Products <span>View →</span></a>
+      <a href="contact.html">Contact <span>Get in touch →</span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Deskfix</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="blog/">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="disclosure.html">Disclosure</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Deskfix</div>
+  </footer>
+
+</body>
+</html>

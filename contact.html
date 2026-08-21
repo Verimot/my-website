@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Deskfix</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; border-bottom: 1px solid var(--stone); }
+    .contact-info { padding: 3rem 2.5rem; border-right: 1px solid var(--stone); background: var(--mist); }
+    .contact-info h2 { font-family: var(--serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 1rem; }
+    .contact-info p { font-size: 0.92rem; color: var(--bark); font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem; }
+    .contact-reasons { margin-top: 2rem; }
+    .contact-reasons .reason { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.1rem; }
+    .reason-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--moss); margin-top: 0.55rem; flex-shrink: 0; }
+    .reason-text { font-size: 0.88rem; color: var(--bark); font-weight: 300; line-height: 1.6; }
+    .contact-form-wrap { padding: 3rem 2.5rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark); margin-bottom: 0.5rem; font-weight: 400; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--stone);
+      background: var(--cream);
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--moss); }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #b0a090; }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+    .form-submit { background: var(--moss); color: #fff; border: none; padding: 0.85rem 2rem; font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.2s; width: 100%; }
+    .form-submit:hover { background: #2d4530; }
+    .form-note { font-size: 0.72rem; color: var(--bark); margin-top: 0.75rem; font-weight: 300; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-info { border-right: none; border-bottom: 1px solid var(--stone); padding: 2rem 1.25rem; }
+      .contact-form-wrap { padding: 2rem 1.25rem; }
+    }
+  </style>
+  <meta name="description" content="Get in touch with the Deskfix team.">
+  <link rel="canonical" href="https://deskfix.blog/contact.html">  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://deskfix.blog/contact.html",
+  "name": "Contact — Deskfix"
+}
+  </script>
+</head>
+<body>
+
+  <div class="disclosure-bar">
+    <p>Some links on this site are affiliate links — we may earn a commission at no extra cost to you.</p>
+    <a href="disclosure.html">Read our full disclosure</a>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Deskfix</a>
+    <div class="nav-links">
+      <a href="blog/">Blog</a>
+      <a href="index.html#picks">Top Picks</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="start-here.html" class="nav-cta">Free Guide →</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Say hello</h1>
+    <p>Questions, feedback, or just want to talk desks. Every message gets read.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="sec-label">What to expect</div>
+      <h2>We reply within 48 hours.</h2>
+      <p>This is a one-person operation, so responses aren't instant — but every message gets read and replied to personally.</p>
+
+      <div class="contact-reasons">
+        <p style="font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bark);margin-bottom:1rem;">Good reasons to reach out</p>
+        <div class="reason"><div class="reason-dot"></div><span class="reason-text">You spotted an error or outdated information in a post</span></div>
+        <div class="reason"><div class="reason-dot"></div><span class="reason-text">You have a question that wasn't answered in the blog</span></div>
+        <div class="reason"><div class="reason-dot"></div><span class="reason-text">You want to share your own desk setup experience</span></div>
+        <div class="reason"><div class="reason-dot"></div><span class="reason-text">You're a brand with a product relevant to ergonomics</span></div>
+        <div class="reason"><div class="reason-dot"></div><span class="reason-text">You just want to say hello — that's welcome too</span></div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <div class="sec-label">Send a message</div>
+
+      <form action="https://formspree.io/f/mwvyvlke" method="POST">
+        <input type="hidden" name="_next" value="https://deskfix.blog/contact-thank-you.html">
+
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="First and last name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="question">I have a question</option>
+            <option value="error">I found an error</option>
+            <option value="product">Product or brand inquiry</option>
+            <option value="feedback">General feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send message →</button>
+        <p class="form-note">Your information is only used to reply to your message. We never share or sell your data. See our <a href="privacy-policy.html" style="color:var(--bark);border-bottom:1px solid var(--bark)">privacy policy</a>.</p>
+
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Deskfix</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="blog/">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="disclosure.html">Disclosure</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Deskfix</div>
+  </footer>
+
+</body>
+</html>
